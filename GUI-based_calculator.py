@@ -7,7 +7,7 @@ root.title("Scientific Calculator")
 root.geometry("460x600")
 root.resizable(0, 0)
 
-# Global expression variable to store the input string
+
 expression = ""
 
 def press(num):
@@ -20,7 +20,7 @@ def equalpress():
     """Evaluate the final expression."""
     try:
         global expression
-        total = str(eval(expression))  # Evaluate the expression using eval()
+        total = str(eval(expression))  
         equation.set(total)
         expression = total
     except:
@@ -111,7 +111,7 @@ for text in button_text:
                         command=clear)
     elif text == "^":
         button = Button(root, text=text, padx=20, pady=20, bd=8, font=('arial', 18, 'bold'),
-                        command=lambda: press("**"))  # Use Python's exponentiation operator
+                        command=lambda: press("**")) 
 
 
     button.grid(row=row_value, column=col_value)
